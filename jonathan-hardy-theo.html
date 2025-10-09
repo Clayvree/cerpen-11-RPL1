@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OALAH INI JALANNYA — Cerpen oleh Davin</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#ff7a18",
+              "brand-dark": "#ff5400",
+              "brand-soft": "#fff6ed",
+              "brand-fade": "#ffe8d3",
+            },
+            fontFamily: {
+              serif: ["Merriweather", "serif"],
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { transition: background 1s ease; }
+
+      /* Scroll Progress Bar */
+      #progressBar {
+        position: fixed;
+        top: 0; left: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #ff7a18, #ffb347);
+        width: 0%;
+        z-index: 50;
+        transition: width 0.2s ease;
+      }
+
+      /* Fade In Effect */
+      .fade-in { opacity: 0; transform: translateY(25px); transition: all 1s ease; }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+      /* Hero Animation */
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(255,122,24,0.4), rgba(255,84,0,0.3), rgba(0,0,0,0.4));
+        background-size: 300% 300%;
+        animation: shimmer 10s ease infinite;
+      }
+      @keyframes shimmer {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Parallax */
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+
+      /* Typing Quote */
+      .typewriter {
+        overflow: hidden;
+        border-right: 2px solid rgba(255, 122, 24, 0.75);
+        white-space: nowrap;
+        animation: typing 5s steps(50, end), blink 1s step-end infinite;
+      }
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      @keyframes blink {
+        50% { border-color: transparent; }
+      }
+
+      /* Image Hover Effect */
+      .photo-hover {
+        transition: all 0.8s ease;
+      }
+      .photo-hover:hover {
+        transform: scale(1.03);
+        filter: brightness(1.1) saturate(1.2);
+      }
+    </style>
+  </head>
+
+  <body class="bg-brand-soft text-gray-800 font-serif leading-relaxed">
+
+    <!-- Progress Bar -->
+    <div id="progressBar"></div>
+
+    <!-- HERO -->
+    <section class="hero relative h-[80vh] w-full overflow-hidden">
+      <div class="absolute inset-0 parallax" 
+           style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1600&auto=format&fit=crop');">
+      </div>
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-wide drop-shadow-2xl">OALAH INI JALANNYA</h1>
+        <p class="mt-4 text-lg text-orange-100 italic drop-shadow-md">Cerpen oleh Davin</p>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-brand-soft to-transparent"></div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="max-w-4xl mx-auto py-16 px-010 text-center">
+      <p class="typewriter text-xl md:text-2xl italic text-gray-700 font-light">
+        “Kadang arah hidup gak datang dari rencana besar, tapi dari satu momen kecil.”
+      </p>
+    </section>
+
+    <!-- CERITA -->
+    <main class="max-w-3xl mx-auto px-6 md:px-0 pb-24 text-justify space-y-6 text-[17px]">
+
+      <p class="first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-2 fade-in">
+        Nama aku Davin. Siswa kelas 12 yang terlihat biasa — terlalu biasa, malah. Nilai pas-pasan, gak aktif di organisasi, dan kalau ditanya guru, “Kamu mau kuliah ke mana?” jawabanku selalu sama:
+      </p>
+
+      <p class="fade-in">“Belum tahu, Bu.”</p>
+
+      <p class="fade-in">Yang sebenarnya ingin kukatakan adalah: “Aku bahkan gak tahu siapa aku.”</p>
+
+      <p class="fade-in">
+        Setiap hari rasanya seperti jalan di lorong yang panjang dan gelap. Semua orang di sekelilingku berjalan cepat, tahu mau ke mana.
+        Ada yang ingin jadi dokter, desainer, polisi, bahkan gamer profesional.
+        Sedangkan aku? Aku hanya ikut arus, takut tersesat, tapi juga gak tahu harus belok ke mana.
+      </p>
+
+      <!-- Parallax Sunset Field -->
+      <div class="h-[50vh] rounded-2xl my-12 overflow-hidden parallax" 
+           style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop');">
+        <div class="w-full h-full bg-black/40 flex items-center justify-center">
+          <p class="text-white text-lg italic">Lapangan sore itu — tempat awal segalanya berubah</p>
+        </div>
+      </div>
+
+      <p class="fade-in">
+        Suatu sore, saat aku duduk sendirian di lapangan sekolah, datang seseorang yang gak kuduga — Rafi, teman satu kelasku yang terkenal santai tapi punya semangat aneh yang selalu bikin iri.
+        Dia membawa kamera DSLR di tangannya dan duduk di sebelahku tanpa basa-basi.
+      </p>
+
+      <p class="fade-in">“Lu kenapa bengong mulu belakangan ini, Vin?”</p>
+      <p class="fade-in">“Bingung aja,” jawabku pelan.</p>
+      <p class="fade-in">“Soal masa depan?”</p>
+
+      <p class="fade-in">Aku menoleh cepat. “Kok tau?”</p>
+      <p class="fade-in">Rafi tertawa kecil. “Karena gue pernah di posisi lu.” Ia menunjuk kamera di tangannya.</p>
+
+      <div class="bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-lg border-l-4 border-brand fade-in">
+        <p class="italic text-gray-700">“Bukan kameranya,” katanya, “tapi momen yang gue tangkap.”</p>
+        <p class="italic text-gray-700 mt-1">“Gue sadar, gue pengen bikin orang ngerasa sesuatu dari apa yang gue lihat.”</p>
+      </div>
+
+      <p class="fade-in">
+        Hari-hari berikutnya, Rafi sering ngajak aku ikut hunting foto keliling kota. Awalnya aku cuma bantu bawa tripod dan nyari tempat bagus.
+        Tapi makin lama, aku mulai menikmati prosesnya — cahaya senja, suara jalanan, tawa orang-orang yang gak kukenal.
+      </p>
+
+      <p class="fade-in">
+        Suatu ketika, Rafi memaksaku memegang kameranya. “Coba foto dari sudut pandang lu sendiri,” katanya.
+      </p>
+
+      <!-- Sunset Image -->
+      <div class="overflow-hidden rounded-2xl shadow-md fade-in">
+        <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=1600&auto=format&fit=crop"
+             class="w-full photo-hover"
+             alt="Sunset moment" />
+        <p class="bg-white py-2 text-center text-sm italic text-gray-500">Klik. Satu foto, satu arah baru.</p>
+      </div>
+
+      <p class="fade-in">
+        Tanpa sadar, aku mulai menemukan makna dari hal-hal sederhana. Dan untuk pertama kalinya dalam hidupku, aku tahu ke mana ingin melangkah. Aku ingin jadi fotografer.
+      </p>
+
+      <p class="fade-in">
+        Saat aku bilang itu ke orang tuaku, mereka sempat terdiam lama. Tapi aku berbicara dengan yakin. “Aku gak tahu apakah ini jalan yang mudah,
+        tapi aku tahu ini jalan yang bikin aku hidup.”
+      </p>
+
+      <p class="fade-in">
+        Kini, setiap kali aku menatap dunia lewat lensa, aku merasa sedang menemukan diriku yang dulu hilang.
+        Aku mungkin masih berjalan di lorong panjang itu, tapi kali ini aku bawa cahaya sendiri.
+      </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10 text-center text-sm text-gray-600 bg-brand-fade border-t border-orange-200">
+      <p>© 2025 Davin — <span class="text-brand font-medium">OALAH INI JALANNYA</span></p>
+      <p class="mt-2 italic text-gray-500">“Satu langkah kecil pun bisa jadi arah baru.”</p>
+    </footer>
+
+    <!-- JS: Fade-in + Scroll progress -->
+    <script>
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.2 });
+      elements.forEach(el => observer.observe(el));
+
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+      });
+    </script>
+
+  </body>
+</html>

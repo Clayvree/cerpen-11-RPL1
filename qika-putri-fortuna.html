@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nilai di Balik Usaha — Cerpen</title>
+
+  <style>
+    /* ====== Reset & font fallback ====== */
+    :root{
+      --bg:#f6f9ff;
+      --card:#ffffff;
+      --accent:#1e40af;
+      --muted:#6b7280;
+      --note:#fef3c7;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #ffffff 60%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.7;
+      padding:32px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    /* ====== Layout ====== */
+    .wrap{
+      width:100%;
+      max-width:900px;
+      margin:24px;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#3b82f6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 8px 24px rgba(30,64,175,0.12);
+      font-size:28px;
+    }
+    header h1{
+      margin:0;
+      font-size:1.45rem;
+      letter-spacing:0.2px;
+    }
+    header p{
+      margin:4px 0 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* ====== Card / Article ====== */
+    article.card{
+      background:var(--card);
+      border-radius:14px;
+      padding:32px;
+      box-shadow:0 12px 30px rgba(15,23,42,0.06);
+    }
+
+    .meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-bottom:18px;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+    .badge{
+      background:var(--note);
+      color:#92400e;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:0.82rem;
+    }
+
+    h2.title{
+      font-size:1.35rem;
+      margin:0 0 16px 0;
+      color:var(--accent);
+    }
+
+    /* paragraph & dialog */
+    article.card p{
+      margin:0 0 14px 0;
+      font-size:1.02rem;
+      text-align:justify;
+    }
+    .dialog{
+      display:block;
+      margin:8px 0 14px 0;
+      padding:10px 14px;
+      border-left:4px solid rgba(30,64,175,0.08);
+      background:linear-gradient(180deg, rgba(59,130,246,0.03), rgba(59,130,246,0.01));
+      border-radius:8px;
+    }
+
+    /* highlight quote */
+    .quote{
+      margin:18px 0;
+      padding:14px 18px;
+      background:#fff7ed;
+      border-left:6px solid #f59e0b;
+      border-radius:10px;
+      color:#92400e;
+      font-weight:600;
+    }
+
+    /* footer actions */
+    .tools{
+      display:flex;
+      gap:8px;
+      margin-top:18px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      appearance:none;
+      border:0;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      box-shadow:0 6px 18px rgba(30,64,175,0.12);
+    }
+    .btn.secondary{
+      background:#fff;
+      color:var(--accent);
+      border:1px solid rgba(30,64,175,0.08);
+      box-shadow:none;
+    }
+
+    /* small note */
+    .note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    /* responsive */
+    @media (max-width:720px){
+      body{padding:18px}
+      .logo{width:56px;height:56px;font-size:22px}
+      article.card{padding:20px}
+      h2.title{font-size:1.15rem}
+    }
+
+    /* print friendly */
+    @media print{
+      body{padding:0;background: #fff}
+      .tools, header .logo{display:none}
+      article.card{box-shadow:none;border-radius:0;padding:18mm}
+    }
+  </style>
+</head>
+<body>
+
+  <main class="wrap" role="main">
+    <header>
+     
+      <div>
+       
+      </div>
+    </header>
+
+    <center>
+      <h2 id="judul" class="title">Nilai di Balik Usaha</h2>
+      </center>
+
+      <p>Bel sekolah berbunyi nyaring, menandakan jam pelajaran terakhir telah selesai. Suara kursi bergeser, tawa teman-teman, dan derap langkah keluar kelas memenuhi ruangan. <strong>Alya</strong>, siswi kelas XI, berjalan pelan sambil memeluk buku catatannya. Di tangannya tergenggam kertas ulangan matematika — angka <strong>65</strong> terpampang di pojok kanan atas.</p>
+
+      <p>Ia duduk di bangku taman sekolah, menatap hasil itu cukup lama. “Kenapa sih aku nggak bisa lebih fokus waktu belajar?” pikirnya. Ia ingat, malam sebelum ulangan, waktunya habis menonton drama dan bermain ponsel.</p>
+
+      <p class="dialog">“Cuma 65…,” gumamnya pelan. Ia tahu, itu bukan karena soalnya susah, tapi karena ia kurang berusaha.</p>
+
+      <p>Tiba-tiba seseorang menepuk bahunya. “Yuk, nongkrong bentar ke kantin. Jangan mikirin nilai terus,” kata <strong>Nina</strong>, sahabatnya sejak SMP. Alya tersenyum kecil. “Nggak deh, aku mau ke perpustakaan. Kayaknya aku butuh belajar lagi buat ulangan susulan.”</p>
+
+      <p>Nina menaikkan alis. “Serius banget, ya. Baru juga dapet nilai jelek, udah semangat belajar lagi.”</p>
+
+      <p>“Justru karena jelek, Nin. Aku pengen buktiin bisa lebih baik,” jawab Alya mantap.</p>
+
+      <p>Di perpustakaan yang sepi, Alya membuka buku matematika dan mulai mencatat ulang rumus-rumus yang dulu terasa membingungkan. Namun pikirannya tidak sepenuhnya fokus. Ia masih merasa kecewa, takut dianggap gagal oleh orang tuanya. “Kalau Mama tahu nilainya segini, pasti kecewa banget…” pikirnya sambil menatap kosong.</p>
+
+      <p>Beberapa menit kemudian, Nina datang membawa dua gelas teh hangat. “Udah, jangan murung gitu. Aku bantuin deh. Kita belajar bareng. Aku juga kan nggak terlalu paham integral.” Alya menatap sahabatnya itu dan tersenyum tulus. “Makasih, Nin. Kamu emang temen terbaik.”</p>
+
+      <p>Mereka pun belajar bersama hingga sore. Di sela-sela rumus dan latihan soal, mereka saling bercerita tentang guru killer, teman yang lucu, dan rencana setelah lulus nanti. Sekilas, semua terasa ringan — seperti sore yang damai dengan cahaya menembus jendela perpustakaan.</p>
+
+      <p class="dialog">Malam itu, rumah Alya terasa lebih hidup dari biasanya. Buku-buku terbuka di atas meja, coretan rumus memenuhi kertas, dan suara Nina yang sesekali tertawa memecah kesunyian.</p>
+
+      <p>“Eh, lihat deh, aku baru ngerti kenapa hasilnya bisa 2x + 3, bukan 2x - 3!” seru Nina. Alya tersenyum, semangatnya kembali. “Iya! Dulu aku mikir matematika tuh menakutkan, tapi ternyata kalo paham konsepnya, enak juga ya.”</p>
+
+      <p>Jam terus berjalan. Mereka baru menyadari waktu sudah hampir tengah malam. Namun, rasa kantuk seakan hilang karena keduanya tenggelam dalam semangat belajar.</p>
+
+      <p>Keesokan harinya di sekolah, Alya datang lebih pagi. Ia membuka kembali catatannya di taman depan kelas. Teman-teman lain masih bercanda, tapi ia memilih untuk fokus. Guru yang lewat sempat tersenyum melihat kesungguhannya.</p>
+
+      <p>“Belajar pagi-pagi, Alya?” tanya Bu Rini, guru matematikanya.</p>
+
+      <p class="dialog">“Iya, Bu. Saya pengen nyoba lagi di ulangan susulan.”</p>
+
+      <p>Bu Rini mengangguk bangga. “Ibu suka semangat kayak gini. Nilai bukan segalanya, tapi usaha itu yang penting.”</p>
+
+      <p>Hari ulangan susulan pun tiba. Alya berusaha menjawab semua soal dengan hati-hati. Setiap kali merasa ragu, ia teringat perjuangan malam-malam belajarnya bersama Nina. Selesai ujian, ia keluar ruangan dengan napas lega.</p>
+
+      <p>“Gimana tadi?” tanya Nina yang menunggunya di luar.</p>
+
+      <p>“Lumayan. Nggak sesulit yang kemarin. Semoga hasilnya bagus,” jawab Alya sambil tersenyum kecil.</p>
+
+      <p>Seminggu kemudian, Bu Rini membagikan hasil ulangan. Alya menatap lembar kertasnya dengan jantung berdebar. Angka di pojok kanan atas membuat matanya berbinar: <strong>90</strong>.</p>
+
+      <p class="dialog">“Serius, Bu? Ini bener nilainya?” tanyanya hampir tak percaya.</p>
+
+      <p>Bu Rini tersenyum lembut. “Iya. Usahamu kelihatan. Jawabanmu rapi, langkahnya benar semua.”</p>
+
+      <p>Nina langsung menepuk bahunya dengan bangga. “Tuh kan, aku bilang juga apa. Usaha nggak akan mengkhianati hasil.”</p>
+
+      <p>Alya menatap angka itu lama-lama. Tapi kali ini, yang ia rasakan bukan sekadar bangga karena angka tinggi, melainkan rasa bahagia karena perjuangan kerasnya terbayar.</p>
+
+      <p>Sepulang sekolah, Alya berjalan melewati koridor yang dulu membuatnya murung. Sekarang langkahnya terasa lebih ringan. Di tangannya, kertas ulangan itu ia lipat rapi dan masukkan ke dalam buku catatan. Bukan untuk dipamerkan, tapi untuk diingat — bahwa setiap keberhasilan pasti dimulai dari kegigihan.</p>
+
+      <div class="quote">“Nilai bisa berubah, tapi semangat untuk memperbaiki diri harus tetap hidup.”</div>
+
+      <p>Sejak hari itu, Alya tidak lagi belajar hanya karena takut nilai jelek. Ia belajar karena ingin memahami, ingin berkembang, dan ingin membuktikan bahwa keberhasilan sejati datang dari ketekunan dan kejujuran.</p>
+
+    
+
+      <p class="note">Makna singkat: Cerpen ini mengingatkan kita bahwa usaha, dukungan teman, dan kejujuran adalah pondasi keberhasilan seorang pelajar.</p>
+    </article>
+  </main>
+
+</body>
+</html>

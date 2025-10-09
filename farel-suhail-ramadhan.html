@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catatan untuk Diri Sendiri — Cerpen</title>
+
+  <!-- Styles -->
+  <style>
+    :root{
+      --bg: #f6f8ff;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #475569;
+      --accent: #5b6bff;
+      --accent-2: #7c86ff;
+      --shadow: 0 8px 30px rgba(23,18,72,0.06);
+      --radius: 14px;
+    }
+    [data-theme="dark"]{
+      --bg: #0b1020;
+      --card: #07102a;
+      --text: #e6eef8;
+      --muted: #a6b0c3;
+      --accent: #7c86ff;
+      --accent-2: #9aa4ff;
+      --shadow: 0 10px 30px rgba(2,6,23,0.7);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, var(--bg), #ffffff 120%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:20px;
+    }
+
+    .wrap{
+      max-width:900px;
+      width:100%;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      margin-bottom:18px;
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:6px;
+    }
+
+    .title-area{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-grid;
+      place-items:center;
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:white;
+      font-weight:700;
+      font-size:20px;
+      box-shadow: 0 6px 18px rgba(92,95,255,0.18);
+    }
+
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:-0.2px;
+      color:var(--text);
+    }
+
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    .controls{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    button{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.06);
+      padding:8px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:14px;
+      color:var(--text);
+    }
+    button.ghost{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.06);
+    }
+    button.primary{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:white;
+      border: none;
+      box-shadow: 0 8px 22px rgba(89,95,255,0.16);
+    }
+    button:active{transform:translateY(1px)}
+
+    main.article{
+      padding-top:8px;
+      line-height:1.78;
+      font-size:17px;
+    }
+
+    .lead{
+      font-weight:600;
+      margin-bottom:10px;
+      color:var(--text);
+    }
+
+    p{
+      margin:12px 0;
+      color:var(--text);
+    }
+
+    .moral{
+      margin-top:18px;
+      padding:14px 16px;
+      border-left:4px solid var(--accent);
+      background: linear-gradient(180deg, rgba(91,107,255,0.03), transparent);
+      border-radius:8px;
+      color:var(--muted);
+    }
+
+    footer.small{
+      margin-top:12px;
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    /* Responsive */
+    @media (max-width:720px){
+      body{padding:18px}
+      .card{padding:18px}
+      .badge{width:48px;height:48px;font-size:18px}
+      h1{font-size:18px}
+      .controls{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="card" id="cerpen-card" role="article" aria-labelledby="judul">
+      <header>
+        <div class="title-area">
+          <div class="badge" aria-hidden="true">📚</div>
+          <div>
+            <h1 id="judul">Catatan untuk Diri Sendiri</h1>
+            <div class="meta">Cerpen remaja — oleh farel</div>
+          </div>
+        </div>
+
+        <div class="controls" aria-hidden="false">
+          <button id="toggleTheme" title="Toggle dark / light">Dark Mode</button>
+        </div>
+      </header>
+
+      <main class="article" id="cerpenText">
+        <p class="lead">Suatu hari, ada seorang gadis bernama Arin yang selalu merasa dirinya tidak cukup baik.</p>
+
+        <p>Setiap kali nilai ulangannya dibagikan, angka merah seolah sudah menunggu di pojok kanan kertas. Bukan karena ia malas, tapi karena ia sering merasa lelah — lelah berusaha keras tapi tetap tertinggal di belakang teman-temannya.</p>
+
+        <p>Di sekolah, Arin duduk sebangku dengan Naya adalah siswi yang pintar, aktif, dan selalu jadi contoh di kelas. Hampir setiap guru memuji Naya, dan tanpa sadar membandingkannya dengan Arin. “Lihat Naya, rajin banget. Kamu juga harus bisa seperti dia,” kata Bu Reni suatu hari. Kalimat itu terdengar biasa, tapi di hati Arin terasa seperti luka kecil yang sulit sembuh.</p>
+
+        <p>Sejak itu, Arin jadi lebih pendiam. Ia belajar hanya karena harus, bukan karena ingin. Sampai suatu sore, di taman sekolah, Naya menghampirinya. “Rin, kamu kenapa sih akhir-akhir ini murung terus?” tanya Naya dengan nada lembut. Arin hanya tersenyum kecil, menunduk, tak tahu harus menjawab apa.</p>
+
+        <p>Naya kemudian mengeluarkan sebuah buku kecil dari tasnya. Sampulnya berwarna biru muda, dengan tulisan tangan di depannya: <em>“Catatan untuk Diri Sendiri.”</em> “Aku kasih kamu ini,” kata Naya. “Dulu aku juga pernah ngerasa nggak cukup baik. Tapi waktu aku nulis hal-hal kecil yang bisa bikin semangat, ternyata aku bisa bangkit lagi.”</p>
+
+        <p>Malamnya, Arin membuka buku itu di kamarnya. Di dalamnya ada banyak kalimat motivasi, kutipan semangat, dan coretan lucu. Salah satu halaman menulis:</p>
+
+        <p style="margin-left:14px; font-style:italic; color:var(--muted)">“Kamu nggak harus sempurna, cukup terus berusaha.”</p>
+
+        <p>Entah kenapa, Arin merasa hangat. Ia mulai belajar sedikit demi sedikit, bukan untuk bersaing, tapi untuk dirinya sendiri.</p>
+
+        <p>Beberapa minggu kemudian, hasil ujian keluar. Nilainya belum sempurna, tapi tidak ada angka merah lagi. Ketika Bu Reni memuji peningkatannya, Arin tersenyum tulus. Untuk pertama kalinya, ia merasa menang — bukan melawan orang lain, tapi melawan dirinya sendiri.</p>
+
+        <div class="moral" role="note">
+          <strong>Pesan moral:</strong><br>
+          Kadang, perjuangan paling berat bukan untuk menjadi terbaik, tapi untuk tidak menyerah pada diri sendiri.
+        </div>
+
+        <footer class="small" aria-hidden="false">
+          <div>© 2025 Cerpen Remaja</div>
+          <div style="opacity:0.9">.</div>
+        </footer>
+      </main>
+    </div>
+
+  </div>
+
+  <!-- Scripts: download, print, theme -->
+  <script>
+    // Theme toggle (persists in localStorage)
+    (function(){
+      const btn = document.getElementById('toggleTheme');
+      const root = document.documentElement;
+      function applyTheme(theme){
+        if(theme === 'dark'){
+          root.setAttribute('data-theme','dark');
+          btn.textContent = 'Light Mode';
+        } else {
+          root.removeAttribute('data-theme');
+          btn.textContent = 'Dark Mode';
+        }
+      }
+      const saved = localStorage.getItem('cerpen-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(saved);
+      btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('cerpen-theme', current);
+        applyTheme(current);
+      });
+    })();
+
+    // Print
+    document.getElementById('printBtn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Download as .txt
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const el = document.getElementById('cerpenText');
+      // Extract visible text (simple)
+      let text = '';
+      el.querySelectorAll('h1, h2, h3, p, .moral, footer').forEach(node => {
+        text += node.innerText.trim() + '\n\n';
+      });
+      const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'cerpen_catatan_untuk_diri_sendiri.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saat Senja Mengajarkan Tenang - Cerpen</title>
+
+  <!-- Font Elegan -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #fdfdfd;
+      --color-text: #2c3e50;
+      --color-accent: #d35400;
+      --color-overlay: rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      overflow-x: hidden;
+    }
+
+    /* --- HEADER --- */
+    header {
+      position: relative;
+      height: 45vh; /* diperkecil dari 70vh */
+      width: 100%;
+      background: 
+        linear-gradient(var(--color-overlay), var(--color-overlay)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkkS9U6mbbU6FLgeCHXs6B-RvgFSXq3vPN-DlYI-3l68Q2fWEUz0yi9bex') 
+        center/cover no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://pngimg.com/uploads/basketball/basketball_PNG1102.png') 
+        15% 85% / 80px no-repeat,
+        url('https://pngimg.com/uploads/basketball_hoop/basketball_hoop_PNG75.png')
+        85% 20% / 120px no-repeat;
+      opacity: 0.18;
+      animation: moveBg 25s linear infinite;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4em; /* sedikit lebih kecil */
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      z-index: 2;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1em;
+      color: #f0f0f0;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes moveBg {
+      0% { background-position: 15% 85%, 85% 20%; }
+      50% { background-position: 20% 80%, 80% 25%; }
+      100% { background-position: 15% 85%, 85% 20%; }
+    }
+
+    /* --- KONTEN CERITA --- */
+    .container {
+      width: 90%;
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 45px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.8s ease;
+    }
+
+    .story-content p {
+      text-align: justify;
+      line-height: 1.9;
+      font-size: 1.1em;
+      margin-bottom: 1.8em;
+    }
+
+    .story-content strong {
+      color: var(--color-accent);
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 2px solid #ddd;
+      width: 40%;
+      margin: 40px auto;
+      opacity: 0.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #eee;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header { height: 35vh; } /* lebih kecil di HP */
+      header h1 { font-size: 1.8em; }
+      header p { font-size: 0.95em; }
+      .container { padding: 25px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Saat Senja Mengajarkan Tenang</h1>
+    <p>Karya: M. Azizi Estuary A</p>
+  </header>
+
+  <div class="container">
+    <main class="story-content">
+      <p>Langit sore itu berwarna <strong>oranye keemasan</strong>, seperti lukisan yang tenang di atas lapangan sekolah. Suara bola basket memantul pelan, menggema di antara tiang ring yang mulai berkarat.</p>
+      <p>Di tepi lapangan, Azizi duduk diam, menatap kosong ke arah tempat yang dulu jadi pelariannya.</p>
+      <p>Beberapa minggu terakhir, hidupnya berantakan. Nilai-nilai ujian turun, orang tuanya mulai marah besar, dan yang paling menyakitkan — ia <strong>dikeluarkan dari tim basket sekolah</strong>. Bukan karena tak berbakat, tapi karena telat datang latihan terlalu sering.</p>
+      <p>Padahal basket adalah satu-satunya tempat ia merasa <strong>cukup baik</strong>.</p>
+      <p>“Zi, masih bete?” suara Dylan terdengar dari belakang. Ia datang sambil membawa dua botol air.</p>
+      <p>Azizi menoleh, tersenyum hambar. “Nggak juga. Cuma... <strong>bingung aja, Dyl</strong>.”</p>
+      <p>Dylan duduk di sampingnya. “Lo tahu kan, pelatih cuma pengen disiplin. Lo telat tiga kali berturut-turut, ya udah pasti dia marah.”</p>
+      <p>“Gue capek, Dyl,” kata Azizi pelan. “Di rumah ribut terus. Bokap nyuruh gue fokus kuliah, nyokap pengen gue ikut les tiap sore. Gue cuma pengen main basket tanpa mikirin semua itu. Tapi ternyata, <strong>bahkan itu pun salah</strong>.”</p>
+      <p>Dylan diam sejenak, lalu menatap lapangan. “Kadang, lo nggak harus nyenengin semua orang. Tapi jangan sampai lo <strong>kehilangan diri lo sendiri</strong> juga.”</p>
+      <p>Azizi menatap Dylan, lalu tertawa kecil. “Lo ngomongnya kayak motivator aja.”</p>
+      <p>Dylan ikut tertawa. “Gue serius, Zi. Kalau lo cinta basket, buktiin. Nggak perlu tim. Cukup lo, bola, dan ring itu.”</p>
+      <p>Mata Azizi mengikuti arah pandangan Dylan — ke ring basket yang berdiri sendiri di ujung lapangan. Langit mulai berubah <strong>ungu</strong>, matahari hampir tenggelam.</p>
+      <p>Tanpa banyak bicara, Azizi berdiri. Ia mengambil bola yang tergeletak di tepi lapangan, menggenggamnya erat. “Sekali lagi, ya. Cuma satu shoot.”</p>
+      <p>Dylan mengangguk. Azizi menatap ring. Angin sore menyentuh wajahnya. Dalam hatinya, ia dengar suara ayahnya, gurunya, pelatihnya — semua tuntutan, semua kritik.</p>
+      <p>Tapi untuk pertama kalinya, ia memilih diam. Ia menarik napas dalam, melangkah maju, dan melompat. Bola itu melayang tinggi... lalu <strong>masuk sempurna</strong>.</p>
+      <p>Pantulannya terdengar lembut, tapi di hati Azizi, seperti <strong>ledakan kecil</strong> dari kelegaan yang lama ia tahan.</p>
+      <p>Ia menatap langit senja yang kini mulai gelap. “Gue bakal balik ke tim itu, Dyl. Tapi kali ini <strong>bukan buat mereka. Buat diri gue sendiri</strong>.”</p>
+      <p>Dylan menepuk bahunya. “Itu baru Azizi yang gue kenal.”</p>
+      <p>Senja pun benar-benar tenggelam, meninggalkan warna ungu yang lembut di langit. Tapi di hati Azizi, <strong>matahari baru saja terbit</strong> — kecil, tapi hangat.</p>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 | Dibuat oleh Azizi | XI RPL 1
+  </footer>
+</body>
+</html>

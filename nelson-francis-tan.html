@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ketukan dari Garasi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Scroll progress bar -->
+  <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-amber-500 z-50 w-0"></div>
+
+  <div class="max-w-3xl mx-auto px-6 py-16">
+
+    <!-- Toggle dark/light mode -->
+    <button id="mode-toggle" class="mb-6 px-4 py-1 border border-gray-500 rounded-full text-sm hover:bg-amber-500 hover:text-black transition">
+      🌙 Toggle Mode
+    </button>
+
+    <!-- Judul -->
+    <h1 class="text-4xl md:text-5xl font-bold text-amber-400 mb-4 text-center font-serif">
+      Ketukan dari Garasi
+    </h1>
+
+    <!-- Penulis -->
+    <p class="text-center text-gray-400 italic mb-10">Oleh Nelson Francis Tan</p>
+
+    <!-- Cerpen -->
+    <div class="space-y-6 text-lg">
+      <p class="fade-in">Danu membuka mata sebelum jam 5 pagi. Udara di kamar masih dingin, tapi pikirannya sudah panas. Di pojok garasi kecil rumahnya, drum butut yang ia beli sendiri menunggu...</p>
+
+      <p class="fade-in">Orang tuanya selalu menentang. Ibu kandungnya ingin Danu fokus sekolah, sedangkan ayah tirinya, yang berasal dari keluarga kaya, menertawakan dunia musik...</p>
+
+      <p class="fade-in">Suatu pagi, ketika Danu sedang serius berlatih di garasi, ayah tirinya menangkapnya. Kemarahan yang sudah lama terpendam meledak...</p>
+
+      <p class="fade-in">Danu tidak menyerah. Ia menemukan toko musik kecil di kota yang ramah bagi pemusik muda. Pemilik toko mengizinkan Danu berlatih setiap hari di ruang yang disediakan...</p>
+
+      <p class="fade-in">Suatu hari, sebuah band terkenal datang ke toko itu, sedang melihat-lihat alat musik. Secara kebetulan, Danu sedang berlatih drum...</p>
+
+      <p class="fade-in">Danu menjalani serangkaian tes: memainkan lagu-lagu band, mencoba chemistry dengan anggota lain, dan membuktikan kesungguhannya...</p>
+
+      <p class="fade-in">Beberapa minggu kemudian, Danu datang ke toko untuk mengucapkan terima kasih, tapi toko itu sudah tutup...</p>
+
+      <p class="fade-in">Danu menutup telepon dengan tekad bulat. Ia ingin membantu pemilik toko itu, membalas kebaikan yang pernah ia terima...</p>
+
+      <p class="text-center text-gray-400 italic mt-10 fade-in">— Tamat —</p>
+    </div>
+  </div>
+
+  <script>
+    // Dark/Light mode toggle
+    const toggleBtn = document.getElementById('mode-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('bg-gray-900');
+      document.body.classList.toggle('bg-gray-100');
+      document.body.classList.toggle('text-gray-100');
+      document.body.classList.toggle('text-gray-900');
+    });
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + '%';
+    });
+
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
+  </script>
+</body>
+</html>
